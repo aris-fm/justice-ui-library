@@ -36,7 +36,7 @@ export const FieldLabel = ({
   tooltip,
   tooltipRef,
 }: FieldLabelProps) => (
-  <label className={classNames("field-label", { withTooltip: tooltip })}>
+  <div className={classNames("field-label", { withTooltip: tooltip })}>
     <div>
       {label}
       {!isRequired && optionalLabel}
@@ -53,7 +53,7 @@ export const FieldLabel = ({
         <ReactTooltip effect="solid" id="field-label__tooltip" html={true} />
       </>
     )}
-  </label>
+  </div>
 );
 
 export interface FieldCounterProps {
